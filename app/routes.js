@@ -60,3 +60,22 @@ router.post('/status-03b', function(request, response) {
     }
 })
 
+router.post('/status-03c', function(request, response) {
+
+    var stat3c = request.session.data['stat3c']
+    if (stat3c == "4e"){
+        response.redirect("/status-checker/v01/status-04e")
+    } else {
+        response.redirect("/status-checker/v01/status-04f")
+    }
+})
+
+router.post('/status-03d', function(request, response) {
+
+    var stat3d = request.session.data['stat3d']
+    if (stat3d == "4g"){
+        response.redirect("/status-checker/v01/status-04g")
+    } else {
+        response.redirect("/status-checker/v01/status-04h")
+    }
+})
