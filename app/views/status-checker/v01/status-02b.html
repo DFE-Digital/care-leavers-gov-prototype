@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-l">Status checker 2b</h1>
+    <p>Intro info</p>
+
+    <form class="form" action="/status-02b" method="post">
+
+    {{ govukRadios({
+      name: "stat2b",
+      value: data['stat2b'],
+      fieldset: {
+        legend: {
+          text: "Is Jamie Oliver still a chef?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "3c",
+          text: "Yes chef"
+        },
+        {
+          value: "3d",
+          text: "No, celebrity"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

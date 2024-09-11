@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-l">Status checker 2a</h1>
+    <p>Intro info</p>
+
+    <form class="form" action="/status-02a" method="post">
+
+    {{ govukRadios({
+      name: "stat2a",
+      value: data['stat2a'],
+      fieldset: {
+        legend: {
+          text: "Is a tomato a fruit or a vegetable?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "3a",
+          text: "Fruit"
+        },
+        {
+          value: "3b",
+          text: "Vegetable"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

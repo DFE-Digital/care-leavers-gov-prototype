@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-l">Status checker 3d</h1>
+    <p>Intro info</p>
+
+    <form class="form" action="/status-03d" method="post">
+
+    {{ govukRadios({
+      name: "stat3d",
+      value: data['stat3d'],
+      fieldset: {
+        legend: {
+          text: "Cats or dogs?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "4g",
+          text: "Cats"
+        },
+        {
+          value: "4h",
+          text: "Dogs"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

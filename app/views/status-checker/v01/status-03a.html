@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-l">Status checker 3a</h1>
+    <p>Intro info</p>
+
+    <form class="form" action="/status-03a" method="post">
+
+    {{ govukRadios({
+      name: "stat3a",
+      value: data['stat3a'],
+      fieldset: {
+        legend: {
+          text: "Do you like pina coladas?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "4a",
+          text: "Yes chef"
+        },
+        {
+          value: "4b",
+          text: "No thank you"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

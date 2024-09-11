@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-l">Status checker</h1>
+    <p>Intro info</p>
+
+    <form class="form" action="/status-01" method="post">
+
+    {{ govukRadios({
+      name: "stat1",
+      value: data['stat1'],
+      fieldset: {
+        legend: {
+          text: "Who would win out of a fight between Mike Tyson and a kangaroo?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "2a",
+          text: "Tyson"
+        },
+        {
+          value: "2b",
+          text: "Kangaroo"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
