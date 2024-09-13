@@ -7,15 +7,14 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-
-    <h1 class="govuk-heading-l">Status checker 4h</h1>
+    <h1 class="govuk-heading-l">Care leaver status result</h1>
 
 
     {% from "govuk/components/panel/macro.njk" import govukPanel %}
 
     {{ govukPanel({
-      titleText: "You are status 4h",
-      html: "You are<br><strong>4h</strong>"
+      titleText: "Eligible child",
+      html: "You are considered an 'Eligible child' which means that you are entitled to support"
     }) }}
     <p><a href="/status-checker/v01/status-01">Start over</a></p>
   </div>

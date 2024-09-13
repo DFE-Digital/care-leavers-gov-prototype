@@ -30,16 +30,6 @@ router.post('/status-02a', function(request, response) {
     }
 })
 
-router.post('/status-02b', function(request, response) {
-
-    var stat2b = request.session.data['stat2b']
-    if (stat2b == "3c"){
-        response.redirect("/status-checker/v01/status-03c")
-    } else {
-        response.redirect("/status-checker/v01/status-03d")
-    }
-})
-
 router.post('/status-03a', function(request, response) {
 
     var stat3a = request.session.data['stat3a']
@@ -59,9 +49,9 @@ router.post('/status-03b', function(request, response) {
     var stat3b = request.session.data['stat3b']
     if (stat3b == "4c"){
         response.redirect("/status-checker/v01/status-no-care-leaver-cla")
-    } else if (stat3b == "3c") {  
+    } else if (stat3b == "4d") {  
         response.redirect("/status-checker/v01/status-qualifying-child");
-    } else if (stat3b == "4c") {  
+    } else if (stat3b == "4g") {  
         response.redirect("/status-checker/v01/status-qualifying-care-leaver");
     } else {
         response.redirect("/status-checker/v01/status-no-care-leaver-25")
@@ -72,18 +62,9 @@ router.post('/status-03c', function(request, response) {
 
     var stat3c = request.session.data['stat3c']
     if (stat3c == "4e"){
-        response.redirect("/status-checker/v01/status-04e")
+        response.redirect("/status-checker/v01/status-eligible-child")
     } else {
-        response.redirect("/status-checker/v01/status-04f")
+        response.redirect("/status-checker/v01/status-relevant-child")
     }
 })
 
-router.post('/status-03d', function(request, response) {
-
-    var stat3d = request.session.data['stat3d']
-    if (stat3d == "4g"){
-        response.redirect("/status-checker/v01/status-04g")
-    } else {
-        response.redirect("/status-checker/v01/status-04h")
-    }
-})
