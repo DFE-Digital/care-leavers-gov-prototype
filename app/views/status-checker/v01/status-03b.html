@@ -7,30 +7,34 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-
-    <h1 class="govuk-heading-l">Status checker 3b</h1>
-    <p>Intro info</p>
-
     <form class="form" action="/status-03b" method="post">
-
+      <span class="govuk-caption-l">Care leaver status checker</span>
     {{ govukRadios({
       name: "stat3b",
       value: data['stat3b'],
       fieldset: {
         legend: {
-          text: "Is it still raining outside?",
+          text: "How old are you?",
           isPageHeading: true,
-          classes: "govuk-fieldset__legend--m"
+          classes: "govuk-fieldset__legend--l"
         }
       },
       items: [
         {
+          value: "4b",
+          text: "Under 16"
+        },
+        {
+          value: "3c",
+          text: "16 or 17"
+        },
+        {
           value: "4c",
-          text: "Yes"
+          text: "18 to 24"
         },
         {
           value: "4d",
-          text: "No"
+          text: "25 and over"
         }
       ]
     }) }}

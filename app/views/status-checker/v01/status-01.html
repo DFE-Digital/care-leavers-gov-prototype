@@ -7,36 +7,37 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-
-    <h1 class="govuk-heading-l">Status checker</h1>
-    <p>Intro info</p>
-
     <form class="form" action="/status-01" method="post">
-
+      <span class="govuk-caption-l">Care leaver status checker</span>
     {{ govukRadios({
       name: "stat1",
       value: data['stat1'],
       fieldset: {
         legend: {
-          text: "Who would win out of a fight between Mike Tyson and a kangaroo?",
+          text: "Were you in care on or after your 16th birthday?",
           isPageHeading: true,
-          classes: "govuk-fieldset__legend--m"
+          classes: "govuk-fieldset__legend--l"
         }
       },
       items: [
         {
           value: "2a",
-          text: "Tyson"
+          text: "Yes"
         },
         {
           value: "2b",
-          text: "Kangaroo"
+          text: "No"
         }
       ]
     }) }}
 
     {{ govukButton({
       text: "Continue"
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "How to tell if I was 'in care'?",
+      text: "In care is a term the government use...."
     }) }}
 
     </form>

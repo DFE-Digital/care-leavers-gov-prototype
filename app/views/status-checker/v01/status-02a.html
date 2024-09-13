@@ -7,30 +7,26 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-
-    <h1 class="govuk-heading-l">Status checker 2a</h1>
-    <p>Intro info</p>
-
     <form class="form" action="/status-02a" method="post">
-
+      <span class="govuk-caption-l">Care leaver status checker</span>
     {{ govukRadios({
       name: "stat2a",
       value: data['stat2a'],
       fieldset: {
         legend: {
-          text: "Is a tomato a fruit or a vegetable?",
+          text: "Were you in care for 13 weeks or longer after your 14th birthday?",
           isPageHeading: true,
-          classes: "govuk-fieldset__legend--m"
+          classes: "govuk-fieldset__legend--l"
         }
       },
       items: [
         {
           value: "3a",
-          text: "Fruit"
+          text: "Yes"
         },
         {
           value: "3b",
-          text: "Vegetable"
+          text: "No"
         }
       ]
     }) }}

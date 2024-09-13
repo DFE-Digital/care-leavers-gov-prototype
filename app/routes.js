@@ -16,7 +16,7 @@ router.post('/status-01', function(request, response) {
     if (stat1 == "2a"){
         response.redirect("/status-checker/v01/status-02a")
     } else {
-        response.redirect("/status-checker/v01/status-02b")
+        response.redirect("/status-checker/v01/status-no-care-leaver")
     }
 })
 
@@ -43,10 +43,14 @@ router.post('/status-02b', function(request, response) {
 router.post('/status-03a', function(request, response) {
 
     var stat3a = request.session.data['stat3a']
-    if (stat3a == "4a"){
-        response.redirect("/status-checker/v01/status-04a")
+    if (stat3a == "4b"){
+        response.redirect("/status-checker/v01/status-no-care-leaver-cla")
+    } else if (stat3a == "3c") {  
+        response.redirect("/status-checker/v01/status-03c");
+    } else if (stat3a == "4c") {  
+        response.redirect("/status-checker/v01/status-former-relevant-child");
     } else {
-        response.redirect("/status-checker/v01/status-04b")
+        response.redirect("/status-checker/v01/status-no-care-leaver-25")
     }
 })
 
@@ -54,9 +58,13 @@ router.post('/status-03b', function(request, response) {
 
     var stat3b = request.session.data['stat3b']
     if (stat3b == "4c"){
-        response.redirect("/status-checker/v01/status-04c")
+        response.redirect("/status-checker/v01/status-no-care-leaver-cla")
+    } else if (stat3b == "3c") {  
+        response.redirect("/status-checker/v01/status-qualifying-child");
+    } else if (stat3b == "4c") {  
+        response.redirect("/status-checker/v01/status-qualifying-care-leaver");
     } else {
-        response.redirect("/status-checker/v01/status-04d")
+        response.redirect("/status-checker/v01/status-no-care-leaver-25")
     }
 })
 

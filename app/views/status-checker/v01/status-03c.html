@@ -7,30 +7,26 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-
-    <h1 class="govuk-heading-l">Status checker 3c</h1>
-    <p>Intro info</p>
-
     <form class="form" action="/status-03c" method="post">
-
+      <span class="govuk-caption-l">Care leaver status checker</span>
     {{ govukRadios({
       name: "stat3c",
       value: data['stat3c'],
       fieldset: {
         legend: {
-          text: "When did Elon Musk turn evil?",
+          text: "Are you still in care?",
           isPageHeading: true,
-          classes: "govuk-fieldset__legend--m"
+          classes: "govuk-fieldset__legend--l"
         }
       },
       items: [
         {
           value: "4e",
-          text: "He has always been evil"
+          text: "Yes"
         },
         {
           value: "4f",
-          text: "Trump did it"
+          text: "No"
         }
       ]
     }) }}
