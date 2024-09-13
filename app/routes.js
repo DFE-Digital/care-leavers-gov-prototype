@@ -49,7 +49,7 @@ router.post('/status-03b', function(request, response) {
     var stat3b = request.session.data['stat3b']
     if (stat3b == "4c"){
         response.redirect("/status-checker/v01/status-no-care-leaver-cla")
-    } else if (stat3b == "4d") {  
+    } else if (stat3b == "4h") {  
         response.redirect("/status-checker/v01/status-qualifying-child");
     } else if (stat3b == "4g") {  
         response.redirect("/status-checker/v01/status-qualifying-care-leaver");
