@@ -2,172 +2,142 @@
 
 {% set pageName="Setting up home allowance" %}
 
+{% block header %}
+
+
+
+          <header class="govuk-header" data-module="govuk-header">
+            <div class="govuk-header__container govuk-width-container">
+              <div class="govuk-header__logo">
+                <a href="#" class="govuk-header__link govuk-header__link--homepage">
+                  <svg
+                    focusable="false"
+                    role="img"
+                    class="govuk-header__logotype"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 148 30"
+                    height="30"
+                    width="148"
+                    aria-label="GOV.UK">
+                    <title>GOV.UK</title>
+                    <path d="M22.6 10.4c-1 .4-2-.1-2.4-1-.4-.9.1-2 1-2.4.9-.4 2 .1 2.4 1s-.1 2-1 2.4m-5.9 6.7c-.9.4-2-.1-2.4-1-.4-.9.1-2 1-2.4.9-.4 2 .1 2.4 1s-.1 2-1 2.4m10.8-3.7c-1 .4-2-.1-2.4-1-.4-.9.1-2 1-2.4.9-.4 2 .1 2.4 1s0 2-1 2.4m3.3 4.8c-1 .4-2-.1-2.4-1-.4-.9.1-2 1-2.4.9-.4 2 .1 2.4 1s-.1 2-1 2.4M17 4.7l2.3 1.2V2.5l-2.3.7-.2-.2.9-3h-3.4l.9 3-.2.2c-.1.1-2.3-.7-2.3-.7v3.4L15 4.7c.1.1.1.2.2.2l-1.3 4c-.1.2-.1.4-.1.6 0 1.1.8 2 1.9 2.2h.7c1-.2 1.9-1.1 1.9-2.1 0-.2 0-.4-.1-.6l-1.3-4c-.1-.2 0-.2.1-.3m-7.6 5.7c.9.4 2-.1 2.4-1 .4-.9-.1-2-1-2.4-.9-.4-2 .1-2.4 1s0 2 1 2.4m-5 3c.9.4 2-.1 2.4-1 .4-.9-.1-2-1-2.4-.9-.4-2 .1-2.4 1s.1 2 1 2.4m-3.2 4.8c.9.4 2-.1 2.4-1 .4-.9-.1-2-1-2.4-.9-.4-2 .1-2.4 1s0 2 1 2.4m14.8 11c4.4 0 8.6.3 12.3.8 1.1-4.5 2.4-7 3.7-8.8l-2.5-.9c.2 1.3.3 1.9 0 2.7-.4-.4-.8-1.1-1.1-2.3l-1.2 4c.7-.5 1.3-.8 2-.9-1.1 2.5-2.6 3.1-3.5 3-1.1-.2-1.7-1.2-1.5-2.1.3-1.2 1.5-1.5 2.1-.1 1.1-2.3-.8-3-2-2.3 1.9-1.9 2.1-3.5.6-5.6-2.1 1.6-2.1 3.2-1.2 5.5-1.2-1.4-3.2-.6-2.5 1.6.9-1.4 2.1-.5 1.9.8-.2 1.1-1.7 2.1-3.5 1.9-2.7-.2-2.9-2.1-2.9-3.6.7-.1 1.9.5 2.9 1.9l.4-4.3c-1.1 1.1-2.1 1.4-3.2 1.4.4-1.2 2.1-3 2.1-3h-5.4s1.7 1.9 2.1 3c-1.1 0-2.1-.2-3.2-1.4l.4 4.3c1-1.4 2.2-2 2.9-1.9-.1 1.5-.2 3.4-2.9 3.6-1.9.2-3.4-.8-3.5-1.9-.2-1.3 1-2.2 1.9-.8.7-2.3-1.2-3-2.5-1.6.9-2.2.9-3.9-1.2-5.5-1.5 2-1.3 3.7.6 5.6-1.2-.7-3.1 0-2 2.3.6-1.4 1.8-1.1 2.1.1.2.9-.3 1.9-1.5 2.1-.9.2-2.4-.5-3.5-3 .6 0 1.2.3 2 .9l-1.2-4c-.3 1.1-.7 1.9-1.1 2.3-.3-.8-.2-1.4 0-2.7l-2.9.9C1.3 23 2.6 25.5 3.7 30c3.7-.5 7.9-.8 12.3-.8m28.3-11.6c0 .9.1 1.7.3 2.5.2.8.6 1.5 1 2.2.5.6 1 1.1 1.7 1.5.7.4 1.5.6 2.5.6.9 0 1.7-.1 2.3-.4s1.1-.7 1.5-1.1c.4-.4.6-.9.8-1.5.1-.5.2-1 .2-1.5v-.2h-5.3v-3.2h9.4V28H55v-2.5c-.3.4-.6.8-1 1.1-.4.3-.8.6-1.3.9-.5.2-1 .4-1.6.6s-1.2.2-1.8.2c-1.5 0-2.9-.3-4-.8-1.2-.6-2.2-1.3-3-2.3-.8-1-1.4-2.1-1.8-3.4-.3-1.4-.5-2.8-.5-4.3s.2-2.9.7-4.2c.5-1.3 1.1-2.4 2-3.4.9-1 1.9-1.7 3.1-2.3 1.2-.6 2.6-.8 4.1-.8 1 0 1.9.1 2.8.3.9.2 1.7.6 2.4 1s1.4.9 1.9 1.5c.6.6 1 1.3 1.4 2l-3.7 2.1c-.2-.4-.5-.9-.8-1.2-.3-.4-.6-.7-1-1-.4-.3-.8-.5-1.3-.7-.5-.2-1.1-.2-1.7-.2-1 0-1.8.2-2.5.6-.7.4-1.3.9-1.7 1.5-.5.6-.8 1.4-1 2.2-.3.8-.4 1.9-.4 2.7zM71.5 6.8c1.5 0 2.9.3 4.2.8 1.2.6 2.3 1.3 3.1 2.3.9 1 1.5 2.1 2 3.4s.7 2.7.7 4.2-.2 2.9-.7 4.2c-.4 1.3-1.1 2.4-2 3.4-.9 1-1.9 1.7-3.1 2.3-1.2.6-2.6.8-4.2.8s-2.9-.3-4.2-.8c-1.2-.6-2.3-1.3-3.1-2.3-.9-1-1.5-2.1-2-3.4-.4-1.3-.7-2.7-.7-4.2s.2-2.9.7-4.2c.4-1.3 1.1-2.4 2-3.4.9-1 1.9-1.7 3.1-2.3 1.2-.5 2.6-.8 4.2-.8zm0 17.6c.9 0 1.7-.2 2.4-.5s1.3-.8 1.7-1.4c.5-.6.8-1.3 1.1-2.2.2-.8.4-1.7.4-2.7v-.1c0-1-.1-1.9-.4-2.7-.2-.8-.6-1.6-1.1-2.2-.5-.6-1.1-1.1-1.7-1.4-.7-.3-1.5-.5-2.4-.5s-1.7.2-2.4.5-1.3.8-1.7 1.4c-.5.6-.8 1.3-1.1 2.2-.2.8-.4 1.7-.4 2.7v.1c0 1 .1 1.9.4 2.7.2.8.6 1.6 1.1 2.2.5.6 1.1 1.1 1.7 1.4.6.3 1.4.5 2.4.5zM88.9 28 83 7h4.7l4 15.7h.1l4-15.7h4.7l-5.9 21h-5.7zm28.8-3.6c.6 0 1.2-.1 1.7-.3.5-.2 1-.4 1.4-.8.4-.4.7-.8.9-1.4.2-.6.3-1.2.3-2v-13h4.1v13.6c0 1.2-.2 2.2-.6 3.1s-1 1.7-1.8 2.4c-.7.7-1.6 1.2-2.7 1.5-1 .4-2.2.5-3.4.5-1.2 0-2.4-.2-3.4-.5-1-.4-1.9-.9-2.7-1.5-.8-.7-1.3-1.5-1.8-2.4-.4-.9-.6-2-.6-3.1V6.9h4.2v13c0 .8.1 1.4.3 2 .2.6.5 1 .9 1.4.4.4.8.6 1.4.8.6.2 1.1.3 1.8.3zm13-17.4h4.2v9.1l7.4-9.1h5.2l-7.2 8.4L148 28h-4.9l-5.5-9.4-2.7 3V28h-4.2V7zm-27.6 16.1c-1.5 0-2.7 1.2-2.7 2.7s1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7-1.2-2.7-2.7-2.7z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </header>
+
+          <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+               <div class="govuk-grid-column-two-thirds">
+
+                <nav class="govuk-breadcrumbs govuk-body-s" aria-label="Breadcrumb">
+                  <ol class="govuk-breadcrumbs__list govuk-body-s">
+                    <li class="govuk-breadcrumbs__list-item">
+                      <a class="govuk-breadcrumbs__link" href="www.gov.uk">Home</a>
+                    </li>
+                    <li class="govuk-breadcrumbs__list-item">
+                      <a class="govuk-breadcrumbs__link" href="index">Care leavers support</a>
+                    </li>
+                    <li class="govuk-breadcrumbs__list-item">
+                      <a class="govuk-breadcrumbs__link" href="housing">Housing</a>
+                    </li>
+                    
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+{% endblock %}
+
 {% block content %}
-
 <div class="govuk-width-container">
-      <div class="govuk-grid-row">
-         <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-grid-row">
+               <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-xl">Setting up home allowance</h1>
 
-            <nav class="govuk-breadcrumbs govuk-body-s" aria-label="Breadcrumb">
-            <ol class="govuk-breadcrumbs__list govuk-body-s">
-              <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="www.gov.uk">Home</a>
-              </li>
-              <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="index">Care leavers support</a>
-              </li>
-              <li class="govuk-breadcrumbs__list-item">
-                <a class="govuk-breadcrumbs__link" href="housing">Housing</a>
-              </li>
-              
-            </ol>
-          </nav>
+  <h2 class="govuk-heading-l">What is the setting up home allowance?</h2>
+  <p class="govuk-body">
+    The setting up home allowance is a one-off payment from your local council to help you when you leave care.
+  </p>
+  <p class="govuk-body">
+    You can use it to buy essentials for your new home, such as furniture or kitchen appliances.
+  </p>
+  <p class="govuk-body">
+    It’s sometimes called the ‘Care Leavers Allowance’ or ‘Leaving Care Grant’.
+  </p>
+  <p class="govuk-body">
+    Your personal advisor or someone from your local council can help you choose and buy what you need.
+  </p>
 
-           <h1 class="govuk-heading-xl">
-            Setting up home allowance
-           </h1>
-          
-         </div>
-      </div>
-   </div>
+  <h2 class="govuk-heading-l">Who can get the setting up home allowance</h2>
+  <p class="govuk-body">You can get the setting up home allowance if your care status is ‘former relevant child’.</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>are aged between 18 and 25</li>
+    <li>spent more than 13 weeks in care since the age of 14, including after you turned 16</li>
+  </ul>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-        <style>
-      ul {
-        list-style-type: none;
-        margin-left: 15px;
+  <p class="govuk-body">Being in care means you were:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>in foster care</li>
+    <li>in residential care or similar</li>
+    <li>in supported lodgings</li>
+    <li>under special guardianship</li>
+    <li>in custody under the age of 18, for example in a secure children's home, secure training centre, or young offender institution</li>
+    <li>an unaccompanied asylum-seeking child</li>
+  </ul>
 
-      }
-      ul li:before {
-        content: '\2013';
-        position: absolute;
-        margin-left: -15px;
-      }
-    </style>
-        <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
-          <ul class="dwp-side-navigation__list dwp-side-navigation__list--dashed">
-          <li class="dwp-side-navigation__item dwp-side-navigation__link">
-              What is the Setting up home allowance?
-          
-          </li>
-          <li class="dwp-side-navigation__item">
-            <a id="d-item-2" href="support-home-allowance-2" class="dwp-side-navigation__link">
-              Who is entitled to it
-            </a>
-          </li>
-          <li class="dwp-side-navigation__item">
-            <a id="d-item-3" href="support-home-allowance-3" class="dwp-side-navigation__link">
-              How much you'll get
-            </a>
-          </li>
-          <li class="dwp-side-navigation__item">
-            <a id="d-item-4" href="support-home-allowance-4" class="dwp-side-navigation__link">
-              How and when you'll get it
-            </a>
-          </li>
-          <li class="dwp-side-navigation__item">
-            <a id="d-item-5" href="support-home-allowance-5" class="dwp-side-navigation__link">
-              If you're receiving other support
-            </a>
-          </li>
-          <li class="dwp-side-navigation__item">
-            <a id="d-item-6" href="support-home-allowance-6" class="dwp-side-navigation__link">
-              Issues with this support
-            </a>
-          </li>
-          <li class="dwp-side-navigation__item">
-            <a id="d-item-7" href="support-home-allowance-7" class="dwp-side-navigation__link">
-              Further information
-            </a>
-          </li>
-          </ul>
-        </nav>
-    
-      </div>
-<div class="govuk-grid-column-two-thirds">
+  <p class="govuk-body">
+    If you’re a ‘relevant child’ or ‘eligible child’, you’ll be entitled to the grant when you turn 18.
+  </p>
+  <p class="govuk-body">
+    To check if you're eligible, ask your personal advisor or local council to confirm your care leaver status.
+  </p>
+  <p class="govuk-body">
+    The setting up home allowance is for people in England. If you live in Scotland or Wales, different support is available.
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><strong>Scotland:</strong> Care Leaver Payment</li>
+    <li><strong>Wales:</strong> Basic Income for Care Leavers</li>
+  </ul>
 
-  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-    
-    
+  <h2 class="govuk-heading-l">How much you'll get</h2>
+  <p class="govuk-body">You’ll get at least £3,000.</p>
+  <p class="govuk-body">Your local council may give you more, depending on your individual circumstances.</p>
 
-    <h2 class="govuk-heading-l" id="what-it-is">What is the Setting up home allowance?</h2>
-    <p class="govuk-body">When you leave care, your local council will give you a one-off payment towards setting up your next home.</p>
-    <p class="govuk-body">You can use this money to purchase essentials such as furniture and kitchen appliances.</p>
-    <p class="govuk-body">Some people call it ‘Care Leavers Allowance’ or ‘Leaving Care Grant’.</p>
-    <p class="govuk-body">Your personal advisor or someone from your local council can help you with buying what you need.</p>
+  <h2 class="govuk-heading-l">How and when you’ll get it</h2>
+  <p class="govuk-body">You can apply for the setting up home allowance when you turn 18.</p>
+  <p class="govuk-body">
+    Your personal advisor or someone from your local council will help you with this.
+  </p>
+  <p class="govuk-body">
+    Once the council agrees on the amount, they’ll pay it into your bank account.
+  </p>
+  <p class="govuk-body">
+    You may get the full amount all at once or in smaller payments over time. This depends on your local council and personal advisor.
+  </p>
+  <p class="govuk-body">
+    If you’re in a 'stay put' arrangement, you can apply at 18 but choose to receive the payment later, for example when you move out or turn 21.
+  </p>
 
-    {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+  <h2 class="govuk-heading-l">If you’re getting other support</h2>
+  <p class="govuk-body">
+    You’re entitled to the setting up home allowance even if you’re getting other financial support, such as benefits, or living in supported accommodation or elsewhere.
+  </p>
 
-    {{ govukPagination({
+  <h2 class="govuk-heading-l">If you have issues with your allowance</h2>
+  <p class="govuk-body">
+    Speak to your personal advisor or someone from your local council if you’re not receiving all the support you need or want to make a complaint.
+  </p>
 
-            next: {
-              labelText: "Who is entitled to it",
-              href: "support-home-allowance-2"
-            }
-          }) }}
-
-    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
-
-    <div class="gem-c-metadata" data-module="gem-toggle metadata" data-gem-toggle-module-started="true" data-metadata-module-started="true">
-      <dl class="gem-c-metadata__list">
-        <dt class="gem-c-metadata__term">From:</dt>
-          <dd class="gem-c-metadata__definition">
-            <a class="govuk-link" href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
-          </dd>
-          <dt class="gem-c-metadata__term">Published</dt>
-          <dd class="gem-c-metadata__definition">07 October 2024</dd>
-          <dt class="gem-c-metadata__term">Last updated</dt>
-          <dd class="gem-c-metadata__definition">25 October 2024</dd>
-      </dl>
-    </div>
-    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-3 govuk-!-margin-bottom-8">
-      <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
-    </div>
-
-    
-
-  </div>
-  <div class="govuk-grid-column-one-third">
-    <!-- <div class="gem-c-related-navigation" style="margin-top: 50px;">
-      <h2 class="govuk-heading-s" style="margin-top: 15px;">
-        Related support
-      </h2>
-      <nav>
-        <ul class="govuk-list">
-          <li>
-            <a class="govuk-link govuk-body-s" href="#">Specific support no1</a>
-          </li>
-          <li>
-            <a class="govuk-link govuk-body-s" href="#">Specific support no2</a>
-          </li>
-          <li>
-            <a class="govuk-link govuk-body-s" href="#">Specific support no3</a>
-          </li>
-          <li>
-            <a class="govuk-link govuk-body-s" href="#">Specific support no4</a>
-          </li>
-          <li>
-            <a class="govuk-link govuk-body-s" href="#">Specific support no5</a>
-          </li>
-          
-        </ul>
-      </nav>
-    </div>     <a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>-->
-
-  </div>
+  <h2 class="govuk-heading-l">More information</h2>
+  <p class="govuk-body">
+    Contact your local council to find out more about the setting up home allowance and check if you’re entitled to a council tax exemption under the ‘Local Offer’.
+  </p>
 </div>
-  
-
-    
-          </section>
-
-          
-    
-  </div>
 </div>
-    
-  </div>
 </div>
+
 
 {% endblock %}
